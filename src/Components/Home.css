@@ -1,0 +1,98 @@
+.carousel {
+  width: 100%;          /* adjust width */
+  height: 300px;         /* adjust height */
+  
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(600px * 3); /* 4 images */
+  animation: slide 16s infinite;
+}
+
+.carousel-track img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Animation for 3 images */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(0); }
+
+  33%  { transform: translateX(-600px); }
+  63%  { transform: translateX(-600px); }
+
+  66%  { transform: translateX(-1200px); }
+  96%  { transform: translateX(-1200px); }
+
+  100% { transform: translateX(0); }
+}
+.tagLine{
+    color:rgb(65, 64, 64);
+    text-align: center;
+    margin: 2rem;
+    font-size: larger;
+}
+.category{
+ padding: 2rem;
+  background: linear-gradient(135deg, #ffccd5, #ffe6f0);
+
+}
+.category-ul{
+   display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  text-decoration: none;
+  padding: 1.2rem;
+  margin: 1rem;
+  gap : 2rem;
+  height: 500px;
+}
+.category li{
+  list-style-type: none;
+ color: black;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: larger;
+}
+.category li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.beauty{
+  background-image: url(https://as1.ftcdn.net/v2/jpg/03/21/82/96/1000_F_321829657_besrNzyXOmGBPgGKxX5CNwM5nf9cveeM.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.furniture{
+  background-image: url(https://tse3.mm.bing.net/th/id/OIP.9P3XMsum0MMXJ7_QLgEQLQHaE7?w=626&h=417&rs=1&pid=ImgDetMain&o=7&rm=3);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.perfume{
+  background-image: url(https://png.pngtree.com/background/20250131/original/pngtree-a-luxurious-pink-perfume-bottle-on-marble-surface-with-peonies-and-picture-image_16241578.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.groceries{
+  background-image: url(https://media.istockphoto.com/id/1221759828/photo/many-fruits-in-the-shopping-cart-on-the-pink-background-template-design-for-ecommerce.jpg?s=170667a&w=0&k=20&c=IR1OvH_FRHSI9814HC5dk9RCYz3ke0MefODo5zZtOBM=);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

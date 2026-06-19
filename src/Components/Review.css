@@ -1,0 +1,31 @@
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 2 cards per row */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.review-card {
+  background: #fff0f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.review-rating {
+  font-size: 1.2rem;
+  color: #ff69b4;
+  margin-bottom: 0.5rem;
+}
+
+.review-comment {
+  font-style: italic;
+  color: #333;
+}

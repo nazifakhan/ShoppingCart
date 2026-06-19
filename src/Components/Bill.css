@@ -1,0 +1,27 @@
+.bill{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: azure;
+    flex-direction: column;
+    width: 30%;
+    padding: 2rem;
+    height: 90%;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 250px;
+}
+.bill-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 2rem;
+}
+.bill p {
+    margin: 5px;
+    padding: 2px;
+}
+.placeOrder{
+    margin-top: 1rem;
+}

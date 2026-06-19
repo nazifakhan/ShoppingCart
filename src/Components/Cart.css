@@ -1,0 +1,87 @@
+.cart-container{
+    background-color: white;
+   
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(151, 150, 150);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 8px;
+}
+.shopping-cart{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+hr{
+    color: rgb(165, 164, 164);
+}
+.items, .main-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Items | Qty | Price | Amount */
+  align-items: center;
+  padding: 10px 0;
+}
+.main-container{
+    border-bottom: 0.5px solid gray;
+}
+
+
+.Items_2{
+    display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.Items_2 div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.total{
+    font-weight: bolder;
+    margin: 1rem;
+}
+input{
+    margin-bottom: 30px;
+}
+.payment-options input{
+    margin: 1rem;
+}
+.dropdown {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 260px; /* match input width */
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.dropdown-item {
+  padding: 2px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0;
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-container input {
+  width: 250px; 
+  padding: 8px;
+}
+button.removeBtn,.inc{
+    background-color: white;
+    font-size: 2px;
+     border: none;
+}
+.inc{
+    font-size: large;
+    height: 35px;
+    border: none;
+}

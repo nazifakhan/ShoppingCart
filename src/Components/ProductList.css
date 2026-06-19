@@ -1,0 +1,23 @@
+/* ProductList.css */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
+  gap: 21px; /* space between cards */
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f8f8f8;
+}
+.title{
+    font-weight: bolder;
+    margin: 1rem 0; 
+    padding: auto;
+
+}
+.desc{
+    color: rgb(61, 61, 61);
+    font-size: 12px;
+}

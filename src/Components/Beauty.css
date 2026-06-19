@@ -1,0 +1,38 @@
+/* ProductList.css */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+  gap: 21px; /* space between cards */
+}
+
+.card {
+    margin: 50px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  background: rgb(255, 211, 185);
+}
+.title{
+    font-weight: bolder;
+    margin: 1rem 0; 
+    padding: auto;
+
+}
+.desc{
+    color: rgb(61, 61, 61);
+    font-size: 12px;
+}
+button{
+  margin: 2px;
+  padding: 8px 20px;
+  background-color: pink;
+  border: 1px solid rgb(248, 118, 140);
+  border-radius: 3px;
+  font-weight: bold;
+}
+button:hover{
+  background-color: transparent;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: ease-out 0.2s;
+}
