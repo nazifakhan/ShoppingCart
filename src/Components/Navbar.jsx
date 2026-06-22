@@ -6,6 +6,7 @@ function Navbar() {
   const cart = JSON.parse(localStorage.getItem("cart")) || []
 
   const totalQty = cart.reduce((sum , item) => sum + item.qty, 0);
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -13,12 +14,15 @@ function Navbar() {
 
       </div>
       <ul className="nav-links">
-        <li><a href="/">Home</a></li>
+        <li><a href="/Home">Home</a></li>
         <li><a href="/products">Products</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/perfume">Perfume</a></li>
+        <li><a href="/furniture">Furniture</a></li>
+        <li><a href="/groceries">Groceries</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="/cart" className='cart-icon '><ShoppingCart />
         {totalQty > 0 && <span className='badge'>{totalQty}</span>}
+
 
         {/**Execution:
           Start with sum = 0.
@@ -26,7 +30,8 @@ function Navbar() {
           Second item: sum + item.qty = 2 + 3 = 5.
           Final result: totalQty = 5. */}
         </a></li>
-
+        
+  
       </ul>
     </nav>
   );

@@ -12,9 +12,10 @@ import Review from './Review';
 
 
 function Home() {
+
     return (
         <div>
-
+ 
 
             <div className="carousel">
                 <div className="carousel-track">
@@ -33,7 +34,7 @@ function Home() {
                 <ul className='category-ul'>
                     <li className='beauty'><Link to="/beauty">Beauty</Link></li>
                     <li className='perfume'><Link to="/perfume">Perfume</Link></li>
-                    <li className='furniture'><Link to="/furnitute">Furniture</Link></li>
+                    <li className='furniture'><Link to="/furniture">Furniture</Link></li>
                     <li className='groceries'><Link to="/groceries">Groceries</Link></li>
 
 
