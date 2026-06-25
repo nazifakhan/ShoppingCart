@@ -1,0 +1,17 @@
+.orderhistory{
+    background-color: rgb(255, 240, 242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 8px;
+}
+.order{
+    border: 1px solid rgb(199, 192, 192);
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgb(250, 194, 201);
+    font-family: 'Courier New', Courier, monospace;
+
+}

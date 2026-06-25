@@ -1,38 +1,71 @@
-/* ProductList.css */
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
-  gap: 21px; /* space between cards */
-}
 
-.card {
-    margin: 50px;
-  border: 1px solid #ddd;
-  padding: 16px;
-  border-radius: 8px;
-  background: rgb(255, 211, 185);
+.beauty-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* default: 2 per row */
+  gap: 21px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px;
 }
 .title{
-    font-weight: bolder;
-    margin: 1rem 0; 
-    padding: auto;
-
+  font-weight: bold;
+  font-style: oblique;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.desc{
-    color: rgb(61, 61, 61);
-    font-size: 12px;
-}
-button{
-  margin: 2px;
-  padding: 8px 20px;
-  background-color: pink;
-  border: 1px solid rgb(248, 118, 140);
-  border-radius: 3px;
+.price{
   font-weight: bold;
 }
+button{
+  background-color: gray;
+  padding: 0.4rem;
+  border: 1px solid pink;
+  border-radius: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 button:hover{
-  background-color: transparent;
   cursor: pointer;
-  transform: scale(0.9);
-  transition: ease-out 0.2s;
+  background-color: #ea7878;
+  color: white;
+  transform: scale(1.1);
+   animation: ease-in-out 5s;
+}
+.card {
+  border: 1px solid #ddd;
+ padding: 16px;
+  border-radius: 8px;
+  width: 290px;
+  box-sizing: border-box;
+  background-color: #ea7878;
+}
+.desc{
+  font-style: italic;
+  color: white;
+}
+.card img {
+  width: 250px;
+  height: 250px;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Mobile: 1 card per row */
+@media all and (max-width:640px) {
+  .beauty-container {
+    grid-template-columns: 1fr;
+  }
+  .desc { display: none; }
+}
+
+/* Tablet: 2 cards per row */
+@media all and (min-width:641px) and (max-width:1024px) {
+  .beauty-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3 cards per row */
+@media all and (min-width:1025px) {
+  .beauty-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

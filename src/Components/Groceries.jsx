@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import './Beauty.css';
-import beauty from '../assets/Furniture.jpg'
+import beauty from '../assets/Fruit.avif'
 
 function Groceries() {
   const { data, isLoading, error } = useQuery({
@@ -31,12 +31,12 @@ function Groceries() {
     alert("Item added to cart");
   };
 
-  return (
+return (
     <div>
       <div>
         <img style={{ width: "100%", height: "350px" }} src={beauty} alt="Banner" />
       </div>
-      <div className='container'>
+      <div className='beauty-container'>
         {products.map(product => (
           <div key={product.id} className='card'>
             <div className="image">

@@ -1,5 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import './Beauty.css';
+
+
 import beauty from '../assets/makeupBanner.jpg'
 
 function Beauty() {
@@ -36,34 +38,31 @@ function Beauty() {
   
 
   return (
-    <div>
+  <div>
 
-        <div >
-            <img style={{"width":"100%" , "height":"350px"}} src={beauty}/>
-        </div>
-    <div className='container'>
-       
-      {products.map(product => (
-        <div key={product.id} className='card'>
-          <div className="image">
-            <img
-              src={product.thumbnail}
-              alt={product.title}
-            />
-          </div>
+<div>
+  <img style={{ width: "100%", height: "350px" }} src={beauty} />
+</div>
 
-          <div className="title">{product.title}</div>
-          <div className="desc">{product.description}</div>
-          <div className="price">Price: ${product.price}</div>
-          <div className="rating">⭐ {product.rating}</div>
-           <div>
-          <button onClick={() => addToCart(product)} >ByNow</button>
-         </div>
-        </div>
-      ))}
+<div className="beauty-container">
+  {products.map(product => (
+    <div key={product.id} className="card">
+      <div className="image">
+        <img src={product.thumbnail} alt={product.title} />
+      </div>
+      <div className="title">{product.title}</div>
+      <div className="desc">{product.description}</div>
+      <div className="price">Price: ${product.price}</div>
+      <div className="rating">⭐ {product.rating}</div>
+      <div>
+        <button onClick={() => addToCart(product)}>Buy Now</button>
+      </div>
     </div>
-     
-    </div>
+  ))}
+</div>
+
+  </div>
+
   );
 }
 

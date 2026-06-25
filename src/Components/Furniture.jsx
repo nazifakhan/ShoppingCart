@@ -36,7 +36,7 @@ function Furniture() {
       <div>
         <img style={{ width: "100%", height: "350px" }} src={beauty} alt="Banner" />
       </div>
-      <div className='container'>
+<div className='beauty-container'>
         {products.map(product => (
           <div key={product.id} className='card'>
             <div className="image">

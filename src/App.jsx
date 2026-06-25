@@ -3,7 +3,6 @@ import './App.css';
 import Home from './Components/Home';
 import Beauty from './Components/Beauty';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import ProductList from './Components/ProductList';
 import Cart from './Components/Cart';
 import Bill from './Components/Bill';
 import LoginSignUp from './Components/LoginSignUp';
@@ -28,7 +27,6 @@ function App() {
         <Route path="/" element={<LoginSignUp />} />
         <Route path="/Home" element={<PrivateRoute><Home /></PrivateRoute>} />
         <Route path="/beauty" element={<PrivateRoute><Beauty /></PrivateRoute>} />
-        <Route path="/products" element={<PrivateRoute><ProductList /></PrivateRoute>} />
         <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute>} />
          <Route path="/bill" element={<PrivateRoute><Bill /></PrivateRoute>} />
          <Route path="/perfume" element={<PrivateRoute><Perfume /></PrivateRoute>} />

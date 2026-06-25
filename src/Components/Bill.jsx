@@ -1,5 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Bill.css';
+
+
 function Bill(){
      const location = useLocation();
      const navigate = useNavigate();
@@ -7,6 +9,7 @@ function Bill(){
 
      const orderSucessfull = () =>{
       alert("order placed sucessfully")
+  
        localStorage.removeItem("cart"); 
       navigate("/Home");
      }
@@ -37,8 +40,7 @@ function Bill(){
             </div>
            
           </div>
-
-           
+        
           
         </>
     )

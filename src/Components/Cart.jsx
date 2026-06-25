@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react';
 import './Cart.css';
 import { useNavigate } from 'react-router-dom';
 import { SquareMinus, SquarePlus, Trash2 } from 'lucide-react';
-
-
-
+import BillHistory from './BillHistory';
 
 function Cart(){
 
@@ -16,19 +14,14 @@ function Cart(){
    
 }
 
-
 const navigate = useNavigate();
-
 const [payement, setpayement] = useState("cod");
 const [showqr , setshowqr] = useState(false);
-
 const [name , setname ] = useState("");
 const [phone , setphone ] = useState("");
 const [address , setaddress ] = useState("");
-
 const [searchTerm , setsearchTerm] = useState("");
 const [cartQty , setcartQty] = useState(JSON.parse(localStorage.getItem("cart"))|| [])
-
 const filteredCart = cart.filter(item =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
 )
@@ -64,21 +57,30 @@ const handleDecrement = (index)=>{
 }
 
 
-const handlePlaceOrder = () =>{
+const handlePlaceOrder = async () =>{
   if (!name || !phone || !address) {
     alert("Please fill in all the fields before placing the order.");
     return;
   }
-   navigate('/bill' , {
+
+  const userId = localStorage.getItem("userId");
+  const newOrders = {userId , cart  , total , payementMethod:payement};
+  await fetch("/order",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify(newOrders)
+  })
+     navigate('/bill' , {
     state: {name , phone , address , cart, total}
-  }
-  )
-}
+  })
   
+  
+//  const existingOrder = JSON.parse(localStorage.getItem("orders"))||[];
+//       const newOrder = {name,cart,total,date:new Date().toISOString()};
+//       existingOrder.push(newOrder);
+//       localStorage.setItem("orders", JSON.stringify(existingOrder))
  
-
-
-
+}
 useEffect(() =>{
   if(payement ==='gpay'){
     setshowqr(true);
@@ -111,22 +113,20 @@ if(payement == 'cod'){
       }
     </div>
   );
-}
-    
-    return(
-        <div className='cart-container'>
-
-            <div className="shopping-cart">
+} 
+  return(
+    <div className='cart-container'>
+       <div className="shopping-cart">
             <h1>Shopping Cart</h1>
           
-          <div className="search-container">
+    <div className="search-container">
 
-          <input 
-           type="text" 
-           placeholder="Search items..." 
-           value={searchTerm} 
-           onChange={(e) => setsearchTerm(e.target.value)} 
-          />
+     <input 
+       type="text" 
+       placeholder="Search items..." 
+       value={searchTerm} 
+       onChange={(e) => setsearchTerm(e.target.value)} 
+     />
 
 {/* Dropdown list */}
 
@@ -254,7 +254,9 @@ if(payement == 'cod'){
            </div>
 
           </div>
+            {/**Bill Summery */}
 
+           <BillHistory />
          
         </div>
     )
