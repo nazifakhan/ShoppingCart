@@ -1,16 +1,44 @@
-# React + Vite
+# 🛍️ MyShop - MERN Stack E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Overview
+MyShop is a simple e-commerce application built with the **MERN stack** (MongoDB, Express.js, React.js, Node.js).  
+It allows users to **sign up, log in, browse products, add items to cart, and place orders**.  
+The app demonstrates secure authentication using **bcrypt** for password hashing and **JWT tokens** for session management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
+- **[User Authentication](ca://s?q=Explain_user_authentication_in_MERN)**  
+  - Sign Up with name, email, password, and phone number.  
+  - Login with email and password.  
+  - Passwords are securely hashed using **bcrypt**.  
+  - JWT tokens are generated for secure sessions.
 
-## React Compiler
+- **[Order Management](ca://s?q=Explain_order_management_in_MERN)**  
+  - Place new orders with cart details, total amount, and payment method.  
+  - Fetch previous orders by user ID or email.  
+  - Orders are linked to users in MongoDB.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **[Frontend (React)](ca://s?q=Explain_React_frontend_in_MERN)**  
+  - Login/Signup form with validation.  
+  - Navbar showing logged-in user’s name and cart quantity.  
+  - Cart badge updates dynamically based on items.  
+  - Logout clears session and cart data.
 
-## Expanding the ESLint configuration
+- **[Backend (Express + MongoDB)](ca://s?q=Explain_Express_MongoDB_backend)**  
+  - REST API endpoints for signup, login, and orders.  
+  - MongoDB models for Users and Orders.  
+  - Secure routes protected with JWT middleware.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React.js, React Router, CSS  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB (Mongoose ODM)  
+- **Authentication:** bcrypt, JWT  
+- **Other Tools:** dotenv, cors  
+
+---
+
+
